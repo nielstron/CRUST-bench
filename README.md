@@ -89,6 +89,15 @@ pip install -r requirements.txt
 
 Rust is required to build the projects. You can install Rust using [rustup](https://www.rust-lang.org/tools/install).
 
+Further, clone the tree-sitter-c and tree-sitter-rust repositories into resources:
+```bash
+cd src/resources
+git clone https://github.com/tree-sitter/tree-sitter-rust.git
+cd tree-sitter-rust && git checkout v0.21.0  && cd ..
+git clone https://github.com/tree-sitter/tree-sitter-c.git
+cd tree-sitter-c && git checkout v0.21.0  && cd ..
+```
+
 ### Loading the Dataset
 The dataset is within the `datasets` folder as a zip file that can be extracted to provide 2 folders:
   1. __CBench__: the projects scraped from github.

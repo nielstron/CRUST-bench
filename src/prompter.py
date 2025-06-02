@@ -7,7 +7,6 @@ from utils.parse_rust import function_signture_builder
 from prompters.repair import (
     MarkdownRepairPrompter,
     BulletPointRepairPrompter,
-    GraphRepairPrompter
 )
 from prompters.transpile import (
     MarkdownPrompter,
