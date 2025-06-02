@@ -166,7 +166,7 @@ python run.py \
     --repairer_format bullet_point_with_system_instructions \
     --repairer_strategy all \
     --iterations 3 \
-    --mode ./endpoints/configs/o1.json \
+    --mode normal \
     --endpoint "o1" \
     --rust_dir "../datasets/RBench"
 ```

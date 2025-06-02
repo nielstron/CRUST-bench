@@ -63,6 +63,7 @@ class Runner:
         self.endpoint = endpoint
         self.include_headers = include_headers
         self.config = config
+        self.rust_dir = rust_dir
         self.n = n
         if rust_dir:
             for benchmark in self.benchmarks:
