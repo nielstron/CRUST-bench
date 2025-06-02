@@ -1,32 +1,16 @@
 import vertexai
 from vertexai.generative_models import GenerativeModel
 import os
-from google import genai
 
 import datetime
 from pathlib import Path
 import json
-from google import genai
-from google.genai.types import (
-    CreateBatchJobConfig,
-    CreateCachedContentConfig,
-    EmbedContentConfig,
-    FunctionDeclaration,
-    GenerateContentConfig,
-    Part,
-    SafetySetting,
-    Tool,
-)
 import multiprocessing
-
-vertexai.init(project, location)
 
 PROJECT_ID = "<PROJECT ID>"  # @param {type: "string", placeholder: "[your-project-id]", isTemplate: true}
 if not PROJECT_ID or PROJECT_ID == "[your-project-id]":
     PROJECT_ID = str(os.environ.get("GOOGLE_CLOUD_PROJECT"))
 
-LOCATION = os.environ.get("GOOGLE_CLOUD_REGION", "GOOGLE REGION")
-client = genai.Client(vertexai=True, project=PROJECT_ID, location=LOCATION)
 
 GEMINI_CACHE = Path("../../cache/gemini_cache.jsonl")
 
