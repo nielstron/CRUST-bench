@@ -3,7 +3,6 @@ import os
 from tqdm import tqdm
 from pathlib import Path
 import shutil
-
 DATASETS_PATH = Path(__file__).parent / '../../datasets/'
 
 def compile_rust_test_proj(proj_name):
@@ -62,9 +61,8 @@ def format_into_compilable_rust(proj_name):
 def format_rust_proj():
     path = DATASETS_PATH / 'RBench'
     output_path = DATASETS_PATH / 'RBench_formatted'
-    if output_path.exists():
-        shutil.rmtree(output_path)
-    output_path.mkdir(parents=True, exist_ok=True)
+    if not output_path.exists():
+        output_path.mkdir(parents=True, exist_ok=True)
     proj_list = list(path.iterdir())
     for proj in tqdm(proj_list):
         if not proj.is_dir():
@@ -75,6 +73,8 @@ def format_rust_proj():
         
 def clean_rust_projects():
     path = DATASETS_PATH / 'RBench_formatted'
+    if path.exists():
+        shutil.rmtree(path)
     proj_list = list(path.iterdir())
     for proj in tqdm(proj_list):
         if proj.is_dir():
