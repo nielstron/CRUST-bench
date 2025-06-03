@@ -10,8 +10,8 @@ FILE_PATH = Path(__file__)
 print(FILE_PATH)
 # Build and include the Rust language library
 Language.build_library(
-    FILE_PATH.parent / "rust_build/my-languages.so",
-    [FILE_PATH.parent.parent / "resources/tree-sitter-rust"],
+    str(FILE_PATH.parent / "rust_build/my-languages.so"),
+    [str(FILE_PATH.parent.parent / "resources/tree-sitter-rust")],
 )
 
 RUST_LANGUAGE = Language(str(FILE_PATH.parent / "rust_build/my-languages.so"), "rust")

@@ -9,8 +9,8 @@ import subprocess
 
 FILE_PATH = Path(__file__)
 Language.build_library(
-    FILE_PATH.parent / "c_build/my-languages.so",
-    [FILE_PATH.parent.parent / "resources/tree-sitter-c"],
+    str(FILE_PATH.parent / "c_build/my-languages.so"),
+    [str(FILE_PATH.parent.parent / "resources/tree-sitter-c")],
 )
 C_LANGUAGE = Language(str(FILE_PATH.parent / "c_build/my-languages.so"), "c")
 PARSER = Parser()

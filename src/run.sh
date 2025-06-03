@@ -1,6 +1,6 @@
 python run.py \
     --benchmark_dir "../datasets/CBench" \
-    --output_dir "outputs/o1" \
+    --output_dir "outputs/claude-3-7-sonnet-20250219" \
     --prompt ./prompts/transpilation_prompts/bullet_point/bullet_point_interface.prompt \
     --prompt_format bullet_point_with_system_instructions \
     --prompt_strategy all \
@@ -9,6 +9,6 @@ python run.py \
     --repairer_strategy all \
     --iterations 3 \
     --mode normal \
-    --endpoint "o1" \
+    --endpoint "claude37" \
     --rust_dir "../datasets/RBench"
 

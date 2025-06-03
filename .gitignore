@@ -2,6 +2,7 @@ secret.sh
 .DS_Store
 src/outputs
 outputs
+src/endpoints/cache
 # Created by https://www.toptal.com/developers/gitignore/api/python,rust,pycharm+all
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,rust,pycharm+all
 
